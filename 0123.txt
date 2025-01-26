@@ -1,0 +1,23 @@
+BNF
+1. C float literals in BNF
+
+int.frac
+<float_lit> -> <dec_float_lit> [<exp_part>] [<surfix>] | <int_part><exp_part>
+<dec_float_lit> -> <int_part>.<frac_part> | <prefix>.<frac_part>
+<frac_part> -> <digits>
+<exp_part> -> (c|E)<int_part>
+<surffix> -> f|F
+<digits> -> 0/1/2/.../9
+<prefix> -> +/-
+
+2. method call in python/java
+
+func():
+
+<method_call> -> [<expr>] <id> ([arg_list])
+<arg_list> -> <expr>
+		   -> <arg_list>,<expr>
+		   
+3. C's switch stat
+
+4. C's union def
