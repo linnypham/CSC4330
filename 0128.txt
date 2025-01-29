@@ -1,0 +1,57 @@
+c-switch
+<switch-state> -> switch(<expr>)
+					{<case_stmts><default_stmt>}
+<case_stmts> -> <case_stmts>|<case_stmts><case_stmts>
+<case_stmt> -> case<lit>: <statements>
+<default_stmt> -> default:<statements> 
+
+
+c-union
+<union_def> -> union<id_opt>{
+				<memebers>
+				
+}<tag_opt>;
+<id_opt> -> <id>|
+<tag_opt> -> <tag>|
+<members> -> <member>|<members><members>
+<member> -> <types><id>;
+
+rule:
+<assign> -> <id>=<expr>
+<id> -> A|B|C
+<expr> -> <expr> + <term> | <term>
+<term> -> <term> * <factor> | <factor>
+<factor> -> (<expr>) | <id>
+
+A = (A+B)*C
+<assign> 
+<id> = <expr>
+A      <term>
+	   <term> * <factor>
+	   <factor>   <id>
+	   (<expr>)     C
+	   <expr>+<term>
+	   <term>   <factor>
+	   <factor>	 <id>
+	   <id>       B
+	    A
+		
+rule:
+<S> -> <A>
+<A> -> <A>+<A> | <id>
+<id> -> a|b|c
+
+<S>
+<A>
+<A>+<A>
+<A>+<A>+<id>
+<id> <id>
+
+<S>
+<A>
+<A>+<A>
+<id>+<A>+<A>
+	<id> <id>
+
+=> ambiguous
+
