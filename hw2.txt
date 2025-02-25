@@ -1,0 +1,9 @@
+1.
+Global variables: x,y,z
+sub1()
+local: a,y,z
+sub2()
+local: a,x,w
+global: x
+sub3()
+local:b,z
