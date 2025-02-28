@@ -10,7 +10,7 @@ C++: a string is simply a sequence of characters
 	length or size functions are used to determine the length of a string
 	to compare the two string comparasion are used in C++
 	to cencatenate 2 string, + operator is used
-Java and C#: String classis used to manipulate the strings. This class is particularly designed tostore and perform a large variety of operations on the stored strings. With the help of this Class, manipulation of string bevomes very fast and simple
+Java and C#: String class is used to manipulate the strings. This class is particularly designed tostore and perform a large variety of operations on the stored strings. With the help of this Class, manipulation of string bevomes very fast and simple
 
 3.
 Type and and scope of the variable used in loop
