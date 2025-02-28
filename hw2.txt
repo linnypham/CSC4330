@@ -1,8 +1,7 @@
 1.
-point 1 :  x = 1(main), y = 9 (sub1), z = 11(sub1) ,a = 7(sub1);
-point 2 :  x =15(sub2), w = 17(sub2), a = 13(sub2), y = 9(sub1);
-point 3 :  x = 15(sub2), b = 21(sub3), a = 19(sub1), z = 23(sub3), w = 17(sub 2);
-point 4 :  x = 15(sub2), b = 21(sub3), a = 19(sub1), z = 23(sub3), w = 17(sub 2);
+sub1: x = 1(main), y = 9 (sub1), z = 11(sub1) ,a = 7(sub1);
+sub2: x =15(sub2), w = 17(sub2), a = 13(sub2), y = 9(sub1);
+sub3: x = 15(sub2), b = 21(sub3), a = 19(sub1), z = 23(sub3), w = 17(sub 2);
 
 2.
 C++: a string is simply a sequence of characters
@@ -15,73 +14,26 @@ Java and C#: String classis used to manipulate the strings. This class is partic
 
 3.
 Type and and scope of the variable used in loop
-
 Is it legal to change the loop variable or loop parameters within the loop and also does that change the loop control
-
 The parameters of loop change only once, or change along with each iteration
 
 4.
-by isolating side-effectful operations within clearly defined boundaries, using dedicated constructs for managing state, and promoting the use of pure functions wherever possible, thereby enabling reasoning about code sections with predictable behavior even when interacting with external systems. 
-
+scenarios where side effects are inevitable: 
+	 I/O operations
+	 mutable state
+	 network requests
+methods to retain benifits of referential transparency:
+	Side effects encapsulation
+	immutable data structures
+	Higher-order functions
 5.
 
-Passed by value:
-
-list[0] = 1 and list[1] = 3
-
-Passed by reference:
-
-list[0] = 2 and list[1] = 6
-
-Passed by value-effect:
-
-list[0] = 2 and list[1] = 6
-
-From the code segment above, the points to be noted are
-
-    An integer array list is declared
-
-    list is declared to accept only two integer values
-
-    list[0] = 1
-
-    list[1] = 3
-
-For pass by value;
-
-None of the actual arguments are changed, so the variables retain the values they were initialized with.
-
-So,
-
-list[0] = 1 and list[1] = 3
-
-Passed by reference
-
-With pass by reference, the arguments are changed.
-
-Given that
-
-list[0] = 1
-
-list[1] = 3
-
-The value of list[0] and list[1] are incremented by their respective original value, as follows
-
-list[0] = 1 + 1 = 2
-
-list[1] = 3 + 3 = 6
-
-So, the new values becomes
-
-list[0] = 2
-
-list[1] = 6
-
-Passed by value-effect
-
-The passed by, value-result has the same effect as reference.
+Passed by value: list = {1, 3}
+Passed by reference: list = {2, 6}
+Passed by value-effect: list = {2, 6}
 
 6.
+closures enables function to encapsulate state within, creating a private scope that persists across function calls.
 
 7.
-creating a closure that encapsulates the necessary state variables within the coroutine function, allowing the state to persist between each time the coroutine is suspended and resumed based on events, effectively acting as a "local memory" for the coroutine's execution flow. 
+Closures allow us to capture variables from a function, preserving their state across coroutine suspensions. Which mean coroutine can resume execution later with the same state.
