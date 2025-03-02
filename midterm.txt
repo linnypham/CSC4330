@@ -1,0 +1,35 @@
+launage category
+
+writebility, readability, ...
+
+components. 
+
+syntax:
+	BNF
+	pressing
+	lexical (large sentence to small)
+	syntax area:
+		top-down
+		bottom-up (LR  parsing table)
+	
+sematic:
+	
+component:
+	name
+		bindary
+		scope
+	types:
+		array/list how implement in common launages, compare,...
+	expression assignment
+	control structure
+	subprogram
+		closure
+		convertile
+		ADT/oop
+			encapsulation
+			interpance
+			polimorphism
+			
+			
+callstack: given functions, need to know where the links will go (static/dynamic)
+
